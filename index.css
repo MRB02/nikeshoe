@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+}
+
+::selection {
+    background-color: transparent;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .card {
+    position: relative;
+    width: 350px;
+    height: 500px;
+    background-color: #232323;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.container .card img {
+    width: 320px;
+    height: 320px;
+}
+
+.container .card #bgcolor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #b4f730;
+    clip-path: circle(40.2% at 15% 17%);
+    transition: 0.5s ease-in-out;
+}
+
+.container .card:hover #bgcolor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    clip-path: circle(68% at 27% 0);
+}
+
+.container .card::after {
+    content: 'Nike';
+    position: absolute;
+    top: 35%;
+    left: -60px;
+    font-size: 12em;
+    font-style: italic;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.04);
+}
+
+.card .imgBx {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    transform: translateY(-10%);
+    transform: rotate(15deg);
+    transition: 0.5s;
+}
+
+.card:hover .imgBx {
+    top: 0;
+    transform: translateY(0);
+    transform: rotate(30deg);
+}
+
+.container .card .contentBx {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 120px;
+    text-align: center;
+    z-index: 10;
+    transition: 0.5s;
+}
+
+.container .card:hover .contentBx {
+    height: 215px;
+}
+
+.container .card .contentBx h2 {
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.container .card .contentBx .size {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+.container .card .contentBx .size h3 {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.container .card:hover .contentBx .size {
+    opacity: 1;
+    visibility: visible;
+}
+
+.container .card .contentBx .size span {
+    margin-left: 10px;
+    padding: 3px 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-weight: 600;
+    border-radius: 3px;
+    transition: 0.5s;
+}
+
+.container .card .contentBx .size span:hover {
+    background-color: #b4f730;
+}
+
+.container .card .contentBx .color {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+.container .card:hover .contentBx .color {
+    opacity: 1;
+    visibility: visible;
+}
+
+.container .card .contentBx .color h3 {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.container .card .contentBx .color span {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-left: 10px;
+    border: 2px solid rgb(255, 255, 255);
+    background-color: #b4f730;
+    cursor: pointer;
+}
+
+.container .card .contentBx .color span:nth-child(2) {
+    background-color: #b4f730;
+}
+
+.container .card .contentBx .color span:nth-child(3) {
+    background-color: #1bdee4;
+}
+
+.container .card .contentBx .color span:nth-child(4) {
+    background-color: #df6d2b;
+}
+
+.container .card .contentBx .order {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.container .card:hover .contentBx .order {
+    opacity: 1;
+    visibility: visible;
+}
+
+.container .card .contentBx .order h3 {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.container .card .contentBx .order span {
+    margin-left: 10px;
+    padding: 3px 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: black;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.container .card .contentBx a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px 20px;
+    margin-top: 15px;
+    opacity: 0;
+    transition: 0.5s;
+    transform: translateY(50px);
+}
+
+.container .card:hover .contentBx a {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.container .card .contentBx a:hover {
+    background-color: #232323;
+    color: white;
+    border: 1.5px solid white;
+}
